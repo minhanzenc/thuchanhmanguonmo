@@ -11,20 +11,22 @@ int tong(int a, int b)
 {
 	return a+b;
 }
-
-int tich(int a,int b){
-	return a*b;
+bool chanLe(int a)
+{
+	if(a%2==0)
+		return true;
+	else
+		return false;
 }
-
 int main()
 {
-	int a, b;
+	int a, b,c;
 	char phepToan;
 	cout << "Nhap so nguyen 1: ";
 	cin >> a;
 	cout << "Nhap so nguyen 2: ";
 	cin >> b;
-	cout << "Chon phep toan (+,-,*) ";
+	cout << "Chon phep toan (+,-) ";
 	cin >> phepToan;
 
 	if(phepToan=="-")
@@ -36,10 +38,10 @@ int main()
 		cout<<"Tong la:"<<tong(a,b);
 
 	}
-	if(phepToan=="*"){
-		cout<<"Tich la:"<<tich(a,b);
-	}
+	if(chanLe(a)==true)
+		cout<< a<< "Là số chẵn";
+	else
+		cout<< a<< "Là số lẻ";
 	system("pause");
 	return 0;
 }
-//Cau 19:
