@@ -12,7 +12,9 @@ int tong(int a, int b)
 	return a+b;
 }
 
-
+int tich(int a,int b){
+	return a*b;
+}
 
 int main()
 {
@@ -22,7 +24,7 @@ int main()
 	cin >> a;
 	cout << "Nhap so nguyen 2: ";
 	cin >> b;
-	cout << "Chon phep toan (+,-) ";
+	cout << "Chon phep toan (+,-,*) ";
 	cin >> phepToan;
 
 	if(phepToan=="-")
@@ -33,6 +35,9 @@ int main()
 	{
 		cout<<"Tong la:"<<tong(a,b);
 
+	}
+	if(phepToan=="*"){
+		cout<<"Tich la:"<<tich(a,b);
 	}
 	system("pause");
 	return 0;
